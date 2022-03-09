@@ -12,17 +12,8 @@ app.listen(port, () => {
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hola Mundo!!!')
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const path = require('path')
+app.use('/static', express.static(path.join(__dirname, 'public')))
